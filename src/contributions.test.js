@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {contributionBook} from './contributions.js';
+const f=[{id:'F',household:'H',period:'2026-11',kind:'शुल्क',amount:50000}];
+test('Passbook excludes pending and rejected payments',()=>{const b=contributionBook(f,[{id:'1',household:'H',fee:'F',status:'approved',type:'income',amount:20000},{id:'2',household:'H',fee:'F',status:'pending',type:'income',amount:10000},{id:'3',household:'H',fee:'F',status:'rejected',type:'income',amount:10000}],'H');assert.equal(b.balance,30000);assert.equal(b.paid,20000);assert.equal(b.pending.length,1)});
+test('Approved reversal restores dues and retains original receipt',()=>{const b=contributionBook(f,[{id:'1',household:'H',fee:'F',status:'approved',type:'income',amount:50000},{id:'2',household:'H',fee:'F',status:'approved',type:'expense',amount:50000,reversalOf:'1'}],'H');assert.equal(b.balance,50000);assert.equal(b.rows[0].receipts.length,2)});
+test('Other household records do not enter passbook',()=>{assert.equal(contributionBook(f,[{household:'OTHER',fee:'F',status:'approved',type:'income',amount:99999}],'H').paid,0)});

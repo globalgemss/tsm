@@ -1,0 +1,126 @@
+[
+  {
+    "name": "Seed reproducibility",
+    "status": "Pass"
+  },
+  {
+    "name": "Duplicate समीक्षा र audit",
+    "status": "Pass"
+  },
+  {
+    "name": "Shared phone अनुमति र unique ID रोक",
+    "status": "Pass"
+  },
+  {
+    "name": "एउटै घरमा धेरै परिवार",
+    "status": "Pass"
+  },
+  {
+    "name": "बसाइँसराइ इतिहास सुरक्षित",
+    "status": "Pass"
+  },
+  {
+    "name": "आंशिक रकम र बढी संकलन रोक",
+    "status": "Pass"
+  },
+  {
+    "name": "दोहोरो शुल्क रोक",
+    "status": "Pass"
+  },
+  {
+    "name": "Pending मौज्दातमा नपर्ने",
+    "status": "Pass"
+  },
+  {
+    "name": "स्वयं स्वीकृति रोक",
+    "status": "Pass"
+  },
+  {
+    "name": "Reversal मूल कारोबार नमेटाई समायोजन",
+    "status": "Pass"
+  },
+  {
+    "name": "गणपूरक अभावमा रोक",
+    "status": "Pass"
+  },
+  {
+    "name": "Meeting approval अनि reopen → draft",
+    "status": "Pass"
+  },
+  {
+    "name": "जिम्मेवारी र प्रमाण",
+    "status": "Pass"
+  },
+  {
+    "name": "भूमिका अनुसार financial रोक",
+    "status": "Pass"
+  },
+  {
+    "name": "Cross tenant read / write रोक",
+    "status": "Pass"
+  },
+  {
+    "name": "आफ्नो व्यक्तिगत विवरण मात्र",
+    "status": "Pass"
+  },
+  {
+    "name": "Ward Viewer निजी data रोक",
+    "status": "Pass"
+  },
+  {
+    "name": "गोप्य उजुरीको पहुँच",
+    "status": "Pass"
+  },
+  {
+    "name": "समाधान प्रमाण अनिवार्य",
+    "status": "Pass"
+  },
+  {
+    "name": "Message failure, retry, duplicate रोक",
+    "status": "Pass"
+  },
+  {
+    "name": "Offline रोक",
+    "status": "Pass"
+  },
+  {
+    "name": "Concurrent version रोक",
+    "status": "Pass"
+  },
+  {
+    "name": "Duplicate request रोक",
+    "status": "Pass"
+  },
+  {
+    "name": "Production Auth / RLS",
+    "status": "Not implemented"
+  },
+  {
+    "name": "Real SMS / WhatsApp",
+    "status": "Not implemented"
+  },
+  {
+    "name": "Multi-device concurrency",
+    "status": "Not implemented"
+  },
+  {
+    "name": "Photo storage / map consent",
+    "status": "Not implemented"
+  },
+  {
+    "name": "Committee election and handover",
+    "status": "Not implemented"
+  },
+  {
+    "name": "Event registration / volunteering",
+    "status": "Not implemented"
+  },
+  {
+    "name": "Dedicated PDF / QR verification",
+    "status": "Not implemented"
+  },
+  {
+    "name": "Backup restore",
+    "status": "Not implemented"
+  }
+]

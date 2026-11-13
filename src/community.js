@@ -1,0 +1,4 @@
+import {seed} from './domain.js';
+export const community={id:1,name:'शान्ति टोल सुधार समिति',english:'SHANTI TOLE SUDHAR SAMITI',location:'नमुना नगरपालिका · वडा १'};
+export function singleCommunity(source=seed()){const d=structuredClone(source);for(const [key,rows] of Object.entries(d)){if(Array.isArray(rows))d[key]=rows.filter(row=>!row||typeof row!=='object'||!('tenant' in row)||row.tenant===community.id)}if(!d.developmentEdition){d.projects.push({id:'P1-road',tenant:1,title:'चौतारी मार्ग सडक सुधार',budget:45000000,progress:100,report:'नमुना सम्पन्न काम: १२० मिटर बाटोको सतह सुधार र किनारा सफाइ।',version:1},{id:'P1-light',tenant:1,title:'उज्यालो गल्ली अभियान',budget:18000000,progress:70,report:'नमुना प्रगति: बत्ती जडान र परीक्षण हुँदै।',version:1});d.developmentEdition=1}return d}
+export function communityRoute(hash){const page=String(hash).replace(/^#/,'').split('/')[0];return {page:page==='login'||page==='app'?page:'home',tenant:1}}

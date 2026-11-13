@@ -1,0 +1,1 @@
+import test from'node:test';import assert from'node:assert/strict';import{checks}from'./checks.js';for(let r of checks().filter(x=>x.status!=='Not implemented'))test(r.name,()=>assert.equal(r.status,'Pass',r.detail));

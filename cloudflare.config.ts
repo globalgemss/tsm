@@ -1,0 +1,2 @@
+import {bindings,defineConfig} from 'cf/config';
+export default defineConfig({accountId:'8e8d379c034765238aea68771cb1ae92',worker:{name:'tsm',entrypoint:'./server/worker.js',compatibilityDate:'2026-11-13',env:{DB:bindings.d1({id:'aeeffb60-bc1f-4e52-8f62-df02bb008a97',name:'tsm-demo-db'}),ASSETS:bindings.assets(),DEMO_ENABLED:bindings.text('true')},assets:{notFoundHandling:'single-page-application',runWorkerFirst:['/api/*']}}});
