@@ -1,4 +1,5 @@
 import React from 'react';
+import DemoPortrait from './DemoPortrait.jsx';
 import './civic-masthead.css';
 
 /**
@@ -7,21 +8,23 @@ import './civic-masthead.css';
  * Never present an AI portrait as a real elected official.
  */
 export const civicOfficials={
-  mayor:{title:'नगर प्रमुख',name:'आधिकारिक नाम राखिनेछ',office:'सम्बन्धित नगरपालिका',photo:''},
-  wardChair:{title:'वडा अध्यक्ष',name:'आधिकारिक नाम राखिनेछ',office:'सम्बन्धित वडा कार्यालय',photo:''}
+  mayor:{title:'नगर प्रमुख',name:'नाम पुष्टि हुन बाँकी',office:'नमुना फोटो · नगरपालिका',photo:'',portraitIndex:0},
+  wardChair:{title:'वडा अध्यक्ष',name:'नाम पुष्टि हुन बाँकी',office:'नमुना फोटो · वडा कार्यालय',photo:'',portraitIndex:5}
 };
 
 function Official({person,side}){
   return <div className={'civic-official civic-official-'+side}>
-    <div className="civic-portrait" aria-label={person.photo?person.title+'को फोटो':person.title+'को फोटो उपलब्ध छैन'}>
-      {person.photo?<img loading="lazy" src={person.photo} alt={person.name+' — '+person.title}/>:<svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><circle cx="32" cy="24" r="12" stroke="currentColor" strokeWidth="2"/><path d="M11 57c2-14 9-21 21-21s19 7 21 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>}
+    <div className="civic-portrait" aria-label={person.title+'को काल्पनिक AI नमुना फोटो'}>
+      {person.photo
+        ? <img loading="lazy" src={person.photo} alt={person.name+' — '+person.title}/>
+        : <DemoPortrait index={person.portraitIndex} name={person.title}/>}
     </div>
     <div className="civic-official-info">
       <span className="civic-office-label">{person.title}</span>
       <strong>{person.name}</strong>
       <small>{person.office}</small>
     </div>
-  </div>
+  </div>;
 }
 export default function CivicMasthead({committeeName,ward,children}){
   return <div className="civic-masthead">
