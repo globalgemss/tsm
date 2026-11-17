@@ -179,3 +179,197 @@
 @media(prefers-reduced-motion:reduce){
   .editorial-v8 .civic-quicklink{transition:none}
 }
+
+
+/* ==========================================================
+   TSM v13 — COLOR FINISHING / HIGH-CONTRAST PUBLIC DESIGN
+   White canvas, deep ink, true navy, restrained metallic gold.
+   All rules scoped to public website to preserve admin controls.
+   ========================================================== */
+.website.editorial-v8 {
+  --tsm-navy:#102D52;
+  --tsm-navy-deep:#082346;
+  --tsm-navy-soft:#1A456C;
+  --tsm-gold:#B8862D;
+  --tsm-gold-light:#E9C46A;
+  --tsm-ink:#162B45;
+  --tsm-body:#344960;
+  --tsm-muted:#52647A;
+  --tsm-stroke:#D8E2EB;
+  --tsm-canvas:#FFFFFF;
+  --tsm-surface:#F7F9FC;
+  background:var(--tsm-canvas);
+  color:var(--tsm-ink);
+  font-family:'Noto Sans Devanagari',system-ui,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.website.editorial-v8 :is(h1,h2,h3,h4){color:var(--tsm-navy);letter-spacing:0;overflow-wrap:anywhere}
+.website.editorial-v8 :is(p,li){color:var(--tsm-body);line-height:1.88}
+.website.editorial-v8 :is(small,.web-kicker){color:var(--tsm-muted);line-height:1.7}
+.website.editorial-v8 .web-kicker{color:#80571E;font-weight:750;font-size:12px;letter-spacing:0}
+.website.editorial-v8 em{color:#92651F}
+.website.editorial-v8 :is(.web-values,.web-leadership,.web-projects,.web-notices,.web-faq,.web-contact){scroll-margin-top:24px}
+
+/* Keep the civic masthead crisp rather than beige / hazy. */
+.website.editorial-v8 .civic-masthead,
+.website.editorial-v8 .civic-masthead-inner{background:#FFFFFF}
+.website.editorial-v8 .civic-identity-text strong{color:#082B53;font-weight:800;letter-spacing:0}
+.website.editorial-v8 .civic-identity-kicker{color:#80561C;font-weight:700}
+.website.editorial-v8 .civic-identity-ward,
+.website.editorial-v8 .civic-official-info small{color:#43566F}
+.website.editorial-v8 .civic-official-info strong{color:#102D52;font-weight:750}
+.website.editorial-v8 .civic-portrait{
+  box-shadow:0 6px 16px #09274820;
+  outline-color:#B8862D;
+}
+.website.editorial-v8 .civic-navigation.web-header{
+  background:#0C2C54;
+  box-shadow:0 5px 18px #0924401A;
+}
+.website.editorial-v8 .civic-navigation nav a,
+.website.editorial-v8 .civic-navigation nav button{color:#FFFFFF;font-weight:650}
+.website.editorial-v8 .civic-navigation nav a:hover,
+.website.editorial-v8 .civic-navigation nav button:hover,
+.website.editorial-v8 .civic-navigation nav .current{color:#FFE5A3;background:#FFFFFF17}
+.website.editorial-v8 .civic-navigation .web-login{
+  background:#F0C45E;color:#142C4A;border-color:#E4B54D;
+  box-shadow:0 4px 12px #061B3450;
+  font-weight:800;
+}
+.website.editorial-v8 .civic-navigation .web-login:hover{background:#FFD77E;color:#0D264A}
+
+/* Hero: dark readable headline, solid button, clean hero photograph. */
+.website.editorial-v8 .web-hero{background:#FFFFFF}
+.website.editorial-v8 .web-hero h1{
+  color:#0B2B52;
+  font-weight:800;
+  line-height:1.43;
+  letter-spacing:0;
+  text-shadow:none;
+}
+.website.editorial-v8 .web-hero h1 em{color:#A36E1B;font-style:normal}
+.website.editorial-v8 .web-hero .hero-intro{color:#173D64;font-weight:700}
+.website.editorial-v8 .web-hero-copy .hero-description{color:#354C63;font-weight:500}
+.website.editorial-v8 .hero-access-note{color:#465A70;font-weight:500}
+.website.editorial-v8 .web-hero .web-primary,
+.website.editorial-v8 .web-login-page .web-primary{
+  background:#123763;border:1px solid #123763;color:#FFFFFF;
+  font-weight:750;box-shadow:0 6px 16px #14365726;
+}
+.website.editorial-v8 .web-hero .web-primary:hover{background:#09294F;color:#FFF}
+.website.editorial-v8 .web-hero .web-secondary{
+  background:#FFFFFF;border:1.5px solid #9E782F;color:#123763;font-weight:750;
+  box-shadow:none;
+}
+.website.editorial-v8 .web-hero .web-secondary:hover{background:#FFF8E9;color:#082D55}
+.website.editorial-v8 .web-hero .community-hero-photo{
+  filter:none;
+  box-shadow:0 15px 32px #0E345D1B;
+  border-color:#C7D5E4;
+}
+.website.editorial-v8 .web-floating-card{
+  background:#FFFFFF;border-color:#D4DBE5;backdrop-filter:none;
+  box-shadow:0 12px 25px #1234561E;
+}
+.website.editorial-v8 .web-floating-card strong{color:#103252}
+.website.editorial-v8 .web-floating-card div>span{color:#40566A}
+.website.editorial-v8 .web-hero-trust{color:#314A62;border-color:#CFDAE5;font-weight:650}
+.website.editorial-v8 .hero-image-label{color:#1E3856;background:#FFFFFF;border:1px solid #CBD6DF}
+
+/* Sharp stats: make the numerals and captions readable and intentional. */
+.website.editorial-v8 .web-stat-strip{
+  background:#0E3059;
+  border-top:2px solid #BA8C35;
+  border-bottom:2px solid #BA8C35;
+}
+.website.editorial-v8 .web-stat-strip strong{color:#FFE4A2;font-weight:800;text-shadow:none}
+.website.editorial-v8 .web-stat-strip span{color:#FFFFFF;font-weight:650}
+.website.editorial-v8 .web-stat-strip>div{border-right-color:#FFFFFF40}
+
+/* Actual white shortcut cards with visible edges and strong titles. */
+.website.editorial-v8 .civic-quicklinks{background:#FFFFFF}
+.website.editorial-v8 .civic-quicklink{
+  background:#FFFFFF;color:#123052;
+  border:1px solid #D5E0EB;border-bottom:3px solid #B68B3F;
+  box-shadow:0 4px 14px #18385714;
+}
+.website.editorial-v8 .civic-quicklink strong{
+  color:#113052;font-weight:800;font-size:13px;
+}
+.website.editorial-v8 .civic-quicklink small{color:#445972;font-size:11px}
+.website.editorial-v8 .civic-quick-icon{
+  background:#F6F0E1;border-color:#D9BD80;color:#86591B;
+}
+@media(hover:hover) and (pointer:fine){
+  .website.editorial-v8 .civic-quicklink:hover{
+    border-color:#B9914B;
+    background:#FFFDF8;
+    box-shadow:0 12px 24px #15385826;
+  }
+}
+
+/* Tighten editorial text contrast through the lower sections. */
+.website.editorial-v8 .web-section-heading h2,
+.website.editorial-v8 .web-values h2,
+.website.editorial-v8 .web-projects h2,
+.website.editorial-v8 .web-notices h2,
+.website.editorial-v8 .web-faq h2,
+.website.editorial-v8 .web-contact h2{color:#102E54;font-weight:800}
+.website.editorial-v8 .web-section-heading p,
+.website.editorial-v8 .web-about-body>p,
+.website.editorial-v8 .web-project-body p,
+.website.editorial-v8 .web-join-card p{color:#3F5269}
+.website.editorial-v8 .web-leader,
+.website.editorial-v8 .web-project-card,
+.website.editorial-v8 .web-notice,
+.website.editorial-v8 .web-join-card{
+  background:#FFFFFF;border:1px solid #D8E2EB;
+  box-shadow:0 6px 18px #12355715;
+}
+.website.editorial-v8 .web-leader h3,
+.website.editorial-v8 .web-project-card h3,
+.website.editorial-v8 .web-notice strong{color:#112F55;font-weight:750}
+.website.editorial-v8 .web-notice-list .web-notice>span,
+.website.editorial-v8 .web-notice-list .web-notice small{color:#425870}
+.website.editorial-v8 .web-join-card button,
+.website.editorial-v8 .web-project-body button{font-weight:750}
+.website.editorial-v8 .web-value-points>span,
+.website.editorial-v8 .web-progress-label,
+.website.editorial-v8 .web-tag{color:#344D66}
+.website.editorial-v8 .web-finance-numbers strong{font-weight:800}
+.website.editorial-v8 .web-faq summary{color:#193A5E;font-weight:750}
+.website.editorial-v8 .web-faq details p{color:#3B5068}
+.website.editorial-v8 .web-contact-info b{color:#143555}
+.website.editorial-v8 .web-footer{background:#0B2A51}
+.website.editorial-v8 .web-footer p,
+.website.editorial-v8 .web-footer small{color:#E5ECF5}
+.website.editorial-v8 .web-footer a,
+.website.editorial-v8 .web-footer button{color:#FFFFFF}
+.website.editorial-v8 .web-footer-bottom{color:#E5ECF5}
+
+/* Login field clarity and focus, without changing demo/auth semantics. */
+.website.editorial-v8 .login-form-shell input,
+.website.editorial-v8 .login-form-shell select,
+.website.editorial-v8 .login-form-shell textarea{
+  background:#FFFFFF;color:#142D4A;border-color:#B6C5D6;
+}
+.website.editorial-v8 :is(a,button,input,select,textarea):focus-visible{
+  outline:3px solid #A67A31;outline-offset:3px;
+}
+@media(max-width:1050px){
+  .website.editorial-v8 .civic-navigation nav.expanded{
+    background:#0D2D54;border:1px solid #386087;
+    box-shadow:0 18px 34px #09254335;
+  }
+  .website.editorial-v8 .civic-navigation nav.expanded a,
+  .website.editorial-v8 .civic-navigation nav.expanded button{color:#FFFFFF}
+}
+@media(max-width:650px){
+  .website.editorial-v8 .web-hero h1{font-size:clamp(27px,7vw,35px)}
+  .website.editorial-v8 .civic-quicklink strong{font-size:12px}
+  .website.editorial-v8 .web-stat-strip span{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){
+  .website.editorial-v8 .civic-quicklink{transition:none}
+}
