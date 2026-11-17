@@ -101,3 +101,38 @@
 @media(prefers-reduced-motion:reduce){
   .editorial-v8 .civic-masthead *{transition-duration:.01ms!important;animation-duration:.01ms!important}
 }
+
+
+/* V12 Royal Navy: a coherent civic identity without touching the admin dashboard. */
+.editorial-v8 .civic-masthead{
+  background:#fffdfa;
+  border-bottom:1px solid #d7b779;
+}
+.editorial-v8 .civic-masthead-inner{background:linear-gradient(115deg,#fafafc,#fff 50%,#fcfaf5);min-height:126px}
+.editorial-v8 .civic-portrait{
+  border:3px solid #fff;
+  outline:1.5px solid #c69e48;
+  border-radius:13px;
+  background:#f3f3f0;
+  box-shadow:0 8px 22px rgba(11,35,69,.16);
+}
+.editorial-v8 .civic-portrait .demo-portrait{
+  width:100%;height:100%;display:block;border:0;border-radius:9px;
+  margin:0;box-shadow:none;
+}
+.editorial-v8 .civic-official-info strong{font-size:12px;color:#142e54;font-weight:700}
+.editorial-v8 .civic-official-info small{color:#66758a}
+.editorial-v8 .civic-identity-text strong{letter-spacing:-.4px;color:#0c2b55}
+.editorial-v8 .civic-office-label{border-radius:6px;background:#10315e}
+.editorial-v8 .civic-navigation.web-header{background:linear-gradient(100deg,#08264d,#113963 52%,#08264d)}
+.editorial-v8 .civic-navigation .web-login{
+  background:linear-gradient(180deg,#f8d981,#daa43b);
+  border-color:#e4b750;color:#132b4f;border-radius:10px;
+  font-weight:800;box-shadow:0 5px 15px #030d2040;
+}
+.editorial-v8 .civic-navigation nav .current{background:#ffffff17}
+@media(max-width:760px){
+  .editorial-v8 .civic-masthead-inner{min-height:116px}
+  .editorial-v8 .civic-portrait .demo-portrait{border-radius:8px}
+  .editorial-v8 .civic-identity-text strong{letter-spacing:0}
+}
