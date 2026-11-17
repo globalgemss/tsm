@@ -1,7 +1,7 @@
 import {singleCommunity} from '../src/community.js';
 import {seed,run,ctx,roles} from '../src/domain.js';
 export function initialState(mode,seedValue=360){const d=singleCommunity(seed(seedValue));if(mode==='empty')for(const k of Object.keys(d))if(Array.isArray(d[k]))d[k]=[];return d}
-const json=(v,status=200,headers={})=>Response.json(v,{status,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff',...headers}});
+const json=(v,status=200,headers={})=>Response.json(v,{status,headers:{'Cache-Control':'no-store, private','X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY','Referrer-Policy':'no-referrer','Permissions-Policy':'camera=(), microphone=(), geolocation=()','Content-Security-Policy':"default-src 'none'; frame-ancestors 'none'",...headers}});
 async function hash(s){return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s))),b=>b.toString(16).padStart(2,'0')).join('')}
 export default {async fetch(request,env){
  const url=new URL(request.url);
