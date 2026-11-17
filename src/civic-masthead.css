@@ -1,0 +1,103 @@
+/* Premium civic masthead: same public site and existing navigation behaviors. */
+.editorial-v8 .civic-masthead{
+  position:relative;z-index:55;background:#fffefb;
+  border-bottom:1px solid #e8ddcf;
+}
+.editorial-v8 .civic-masthead-inner{
+  max-width:1400px;min-height:132px;margin:0 auto;padding:16px 30px;
+  display:grid;grid-template-columns:minmax(215px,1fr) minmax(340px,1.95fr) minmax(215px,1fr);
+  align-items:center;gap:22px;
+  background:linear-gradient(100deg,#fffefa 0%,#fff 45%,#fffefa 100%);
+}
+.editorial-v8 .civic-official{min-width:0;display:flex;align-items:center;gap:12px}
+.editorial-v8 .civic-official-right{flex-direction:row-reverse;text-align:right}
+.editorial-v8 .civic-portrait{
+  position:relative;width:77px;height:83px;flex:0 0 77px;overflow:hidden;
+  background:linear-gradient(145deg,#f0eee6,#e9e4db);color:#9a8e7a;
+  border:3px solid #fff;outline:1px solid #cfb886;border-radius:17px;
+  box-shadow:0 5px 18px #1b315019;display:grid;place-items:center;
+}
+.editorial-v8 .civic-portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.editorial-v8 .civic-portrait svg{width:46px;height:46px}
+.editorial-v8 .civic-official-info{display:flex;flex-direction:column;gap:3px;min-width:0}
+.editorial-v8 .civic-office-label{
+  display:inline-block;align-self:flex-start;padding:4px 9px;border-radius:5px;
+  color:#fff;background:#102e56;font-size:11px;font-weight:700;line-height:1.5;
+}
+.editorial-v8 .civic-official-right .civic-office-label{align-self:flex-end}
+.editorial-v8 .civic-official-info strong{font-size:12px;color:#233a56;line-height:1.6}
+.editorial-v8 .civic-official-info small{font-size:10px;color:#7b8190;line-height:1.5}
+.editorial-v8 .civic-identity{
+  min-width:0;display:flex;align-items:center;justify-content:center;gap:15px;
+  text-align:left;text-decoration:none;color:#102e56;padding:0 18px;
+  border-left:1px solid #d5bb7e;border-right:1px solid #d5bb7e;
+}
+.editorial-v8 .civic-identity-mark{
+  width:72px;height:72px;flex:0 0 72px;border:1px solid #ddc78d;border-radius:50%;
+  display:grid;place-items:center;color:#15365e;background:#fffaf0;
+  box-shadow:0 5px 17px #a6874e1f;
+}
+.editorial-v8 .civic-identity-mark svg{width:49px;height:49px}
+.editorial-v8 .civic-identity-text{display:flex;flex-direction:column;gap:3px;min-width:0}
+.editorial-v8 .civic-identity-kicker{font-size:10px;color:#9a7a44;letter-spacing:.25px}
+.editorial-v8 .civic-identity-text strong{font-size:clamp(20px,2.5vw,31px);font-weight:800;color:#102e56;line-height:1.45}
+.editorial-v8 .civic-identity-text small{font-size:11px;color:#244a66;display:flex;align-items:center;gap:7px}
+.editorial-v8 .civic-identity-text i{width:4px;height:4px;border-radius:50%;background:#b99654}
+.editorial-v8 .civic-identity-ward{font-size:10px;color:#7b8292}
+.editorial-v8 .civic-navigation.web-header{
+  position:relative;top:auto;z-index:60;min-height:65px;height:65px;max-width:none;
+  padding:0 max(calc((100vw - 1260px)/2),3vw);background:#102e56;
+  border:0;box-shadow:0 6px 16px #09254b1c;
+}
+.editorial-v8 .civic-navigation nav{margin-left:0;flex:1;justify-content:center;gap:10px}
+.editorial-v8 .civic-navigation nav a,
+.editorial-v8 .civic-navigation nav button{
+  color:#f1f5f8;font-size:13px;font-weight:600;padding:11px 13px;
+}
+.editorial-v8 .civic-navigation nav a:hover,
+.editorial-v8 .civic-navigation nav button:hover,
+.editorial-v8 .civic-navigation nav .current{color:#ffe2a3;background:#ffffff12;box-shadow:none}
+.editorial-v8 .civic-navigation .web-login{
+  background:#dfb456;border-color:#dfb456;color:#172d4e;
+  box-shadow:0 4px 14px #00000016;
+}
+.editorial-v8 .civic-navigation .web-menu{color:#fff;border-color:#ffffff60}
+@media(max-width:1170px){
+  .editorial-v8 .civic-masthead-inner{gap:12px;padding-inline:20px;grid-template-columns:minmax(165px,1fr) minmax(300px,2fr) minmax(165px,1fr)}
+  .editorial-v8 .civic-portrait{width:61px;height:68px;flex-basis:61px}
+  .editorial-v8 .civic-identity-mark{width:59px;height:59px;flex-basis:59px}
+  .editorial-v8 .civic-navigation nav{gap:1px}
+  .editorial-v8 .civic-navigation nav a,.editorial-v8 .civic-navigation nav button{padding-inline:8px;font-size:12px}
+}
+@media(max-width:1050px){
+  .editorial-v8 .civic-navigation.web-header{height:64px;min-height:64px}
+  .editorial-v8 .civic-navigation nav{top:64px;background:#102e56}
+  .editorial-v8 .civic-navigation nav a,.editorial-v8 .civic-navigation nav button{color:#f2f4f7}
+  .editorial-v8 .civic-navigation .web-menu{display:block}
+}
+@media(max-width:760px){
+  .editorial-v8 .civic-masthead-inner{min-height:110px;gap:8px;padding:13px 12px;grid-template-columns:minmax(60px,1fr) minmax(0,3fr) minmax(60px,1fr)}
+  .editorial-v8 .civic-official{flex-direction:column;gap:5px;text-align:center}
+  .editorial-v8 .civic-official-info strong,.editorial-v8 .civic-official-info small{display:none}
+  .editorial-v8 .civic-office-label,.editorial-v8 .civic-official-right .civic-office-label{
+    align-self:center;white-space:nowrap;font-size:9px;padding:2px 5px;
+  }
+  .editorial-v8 .civic-portrait{height:53px;width:49px;flex-basis:53px;border-radius:10px}
+  .editorial-v8 .civic-portrait svg{width:32px;height:32px}
+  .editorial-v8 .civic-identity{gap:6px;padding:0 5px;border:0;text-align:center;flex-direction:column}
+  .editorial-v8 .civic-identity-mark{width:39px;height:39px;flex-basis:39px}
+  .editorial-v8 .civic-identity-mark svg{width:29px;height:29px}
+  .editorial-v8 .civic-identity-kicker,.editorial-v8 .civic-identity-ward{display:none}
+  .editorial-v8 .civic-identity-text strong{font-size:clamp(12px,3.7vw,18px);line-height:1.4}
+  .editorial-v8 .civic-identity-text small{font-size:9px;justify-content:center;gap:4px;flex-wrap:wrap}
+  .editorial-v8 .civic-navigation.web-header{height:60px;min-height:60px;padding:0 12px}
+  .editorial-v8 .civic-navigation nav{top:60px}
+}
+@media(max-width:390px){
+  .editorial-v8 .civic-masthead-inner{grid-template-columns:56px minmax(0,1fr) 56px;padding-inline:6px}
+  .editorial-v8 .civic-identity-text strong{font-size:12px}
+  .editorial-v8 .civic-identity-text small{font-size:8px}
+}
+@media(prefers-reduced-motion:reduce){
+  .editorial-v8 .civic-masthead *{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
