@@ -373,3 +373,118 @@
 @media(prefers-reduced-motion:reduce){
   .website.editorial-v8 .civic-quicklink{transition:none}
 }
+
+
+/* TSM v14: member portal invitation matches the approved white/navy/gold design. */
+.website.editorial-v8 .web-notices .web-join-card{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  width:100%;
+  min-width:0;
+  padding:clamp(26px,3vw,38px)!important;
+  border:1.5px solid #c29741;
+  border-radius:19px;
+  background:#ffffff;
+  color:#152f51;
+  box-shadow:0 8px 22px rgba(15,43,76,.10);
+  text-align:left;
+}
+.website.editorial-v8 .web-notices .web-join-card::before{
+  content:'';
+  pointer-events:none;
+  position:absolute;
+  inset:auto -15% 15% 28%;
+  height:38%;
+  background:linear-gradient(155deg,transparent 35%,rgba(214,183,114,.10) 35%,rgba(214,183,114,.10) 47%,transparent 47%,transparent 59%,rgba(16,45,82,.045) 59%,transparent 73%);
+  z-index:-1;
+}
+.website.editorial-v8 .web-notices .web-join-icon{
+  width:57px;
+  height:57px;
+  margin:0 0 21px;
+  border-radius:14px;
+  border:2px solid #d5a847;
+  color:#ffffff;
+  background:#10325a;
+  box-shadow:0 4px 12px rgba(13,47,81,.13);
+}
+.website.editorial-v8 .web-notices .web-join-icon svg{width:28px;height:28px;color:#ffffff}
+.website.editorial-v8 .web-notices .web-join-card h3{
+  margin:0 0 14px;
+  padding:0;
+  font-size:clamp(23px,2.25vw,32px);
+  line-height:1.55;
+  letter-spacing:0;
+  font-weight:800;
+  color:#102d52;
+  text-shadow:none;
+}
+.website.editorial-v8 .web-notices .web-join-card h3::after{
+  content:'';
+  display:block;
+  width:52px;
+  height:4px;
+  margin-top:14px;
+  border-radius:4px;
+  background:#bd8e35;
+}
+.website.editorial-v8 .web-notices .web-join-card p{
+  margin:0 0 22px;
+  max-width:42ch;
+  font-size:14px;
+  font-weight:500;
+  line-height:1.92;
+  color:#344960;
+}
+.website.editorial-v8 .web-notices .web-join-card button{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  width:100%;
+  max-width:none;
+  min-height:56px;
+  margin-top:19px;
+  padding:12px 19px;
+  border-radius:12px;
+  border:1.5px solid #cea34d;
+  background:#10325a;
+  color:#ffffff;
+  font-size:14px;
+  font-weight:800;
+  box-shadow:0 5px 15px rgba(16,50,90,.17);
+  transition:background .16s ease,transform .16s ease,box-shadow .16s ease;
+}
+.website.editorial-v8 .web-notices .web-join-card button svg{
+  width:20px;
+  height:20px;
+  flex-shrink:0;
+  color:#f7d478;
+}
+@media(hover:hover) and (pointer:fine){
+  .website.editorial-v8 .web-notices .web-join-card button:hover{
+    transform:translateY(-2px);
+    background:#071f40;
+    box-shadow:0 9px 22px rgba(16,50,90,.23);
+  }
+}
+@media(max-width:800px){
+  .website.editorial-v8 .web-notices .web-join-card{
+    padding:28px!important;
+  }
+  .website.editorial-v8 .web-notices .web-join-card button{
+    max-width:none;
+  }
+}
+@media(max-width:480px){
+  .website.editorial-v8 .web-notices .web-join-card{
+    border-radius:15px;
+    padding:23px!important;
+  }
+  .website.editorial-v8 .web-notices .web-join-card h3{font-size:24px}
+  .website.editorial-v8 .web-notices .web-join-card p{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){
+  .website.editorial-v8 .web-notices .web-join-card button{transition:none}
+}
